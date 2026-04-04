@@ -1,0 +1,83 @@
+.justify-center {
+  justify-content: center;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.membership-card {
+  padding: 2.5rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.google-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #4285F4;
+  color: #4285F4;
+}
+
+.google-btn:hover {
+  background-color: #4285F4;
+  color: white;
+}
+
+.alert {
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.alert-error {
+  background-color: #fde8e8;
+  color: #c81e1e;
+  border: 1px solid #f8b4b4;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 768px) {
+  .membership-card {
+    padding: 1.5rem;
+  }
+}

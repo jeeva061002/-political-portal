@@ -1,0 +1,78 @@
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+}
+
+.election-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.election-table th, .election-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.election-table th {
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.election-table tr:hover {
+  background-color: var(--off-white);
+}
+
+.election-table tr:last-child td {
+  border-bottom: none;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-won {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-lost {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

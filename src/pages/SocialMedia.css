@@ -1,0 +1,83 @@
+.col-md-7 {
+  flex: 0 0 58%;
+  max-width: 58%;
+}
+
+.col-md-5 {
+  flex: 0 0 38%;
+  max-width: 38%;
+  margin-left: 4%;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.insta-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.insta-img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+  margin-right: 10px;
+}
+
+.tweet-user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.tweet-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.tweet-actions {
+  display: flex;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 968px) {
+  .col-md-7, .col-md-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  
+  .col-md-5 {
+    margin-top: 3rem;
+  }
+  
+  .video-hero-wrapper iframe {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

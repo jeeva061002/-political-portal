@@ -1,0 +1,148 @@
+.page-header {
+  padding: 4rem 1rem;
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.pt-4 {
+  color: #ffffff;
+  padding-top: 1.5rem;
+}
+
+.pb-5 {
+  padding-bottom: 4rem;
+}
+
+.mt-5 {
+  margin-top: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 4rem;
+}
+
+.my-5 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.mb-3 {
+
+  margin-bottom: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-4 {
+  padding: 1.5rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.split-image-container {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  padding: 10px;
+  /* Framework for the glass panel to show */
+  height: 400px;
+}
+
+.split-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.stats-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--gray);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 1 300px;
+  border-radius: var(--radius-md);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+  color: var(--black) !important;
+}
+
+.value-card h4, 
+.value-card p {
+  color: var(--black) !important;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  border-bottom: 4px solid var(--primary-red);
+}
+
+.value-icon {
+  font-size: 3rem;
+  color: var(--primary-red);
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 968px) {
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bg-about-yellow {
+  background-color: #eab308;
+  /* Suitable vibrant yellow */
+  color: #ffffff;
+}
