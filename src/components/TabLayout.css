@@ -23,13 +23,12 @@
   position: relative;
   transition: all 0.3s ease;
 }
-
 .tab-btn:hover {
-  color: var(--primary-red);
+  color: var(--accent-yellow);
 }
 
 .tab-btn.active {
-  color: var(--primary-red);
+  color: var(--accent-yellow);
 }
 
 .tab-btn::after {
@@ -39,7 +38,8 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: var(--primary-red);
+  background-color: var(--accent-yellow);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: center;
@@ -47,6 +47,7 @@
 
 .tab-btn.active::after {
   transform: scaleX(1);
+  background-color: var(--accent-yellow);
 }
 
 .tab-content-container {

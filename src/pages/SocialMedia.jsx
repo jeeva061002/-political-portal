@@ -91,13 +91,15 @@ const SocialMedia = () => {
 
         {/* Facebook Section */}
         <section className="mt-5 pt-5 mb-5">
-          <div className="glass-panel p-5 text-center bg-white">
-            <FaFacebook style={{ fontSize: '4rem', color: '#1877F2', marginBottom: '1.5rem' }} />
-            <h3 className="mb-3">Official Facebook Page</h3>
-            <p className="text-gray mb-4 max-w-600 mx-auto">Get daily news updates, press releases, and event live streams directly from our official Facebook community.</p>
-            <a href="https://www.facebook.com/NaamTamilarOfficial" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ backgroundColor: '#1877F2', borderColor: '#1877F2' }}>
-              Visit Facebook Page
-            </a>
+          <div className="container">
+            <div className="glass-panel facebook-card p-5 d-flex flex-column align-center justify-center text-center bg-white mx-auto" style={{ maxWidth: '800px', width: '100%' }}>
+              <FaFacebook style={{ fontSize: '4.5rem', color: '#1877F2', marginBottom: '1.5rem' }} />
+              <h2 className="mb-3">Official Facebook Page</h2>
+              <p className="text-gray mb-4 max-w-600 mx-auto" style={{ fontSize: '1.1rem' }}>Get daily news updates, press releases, and event live streams directly from our official Facebook community.</p>
+              <a href="https://www.facebook.com/NaamTamilarOfficial" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large" style={{ backgroundColor: '#1877F2', borderColor: '#1877F2', padding: '15px 40px' }}>
+                Visit Facebook Page
+              </a>
+            </div>
           </div>
         </section>
       </div>

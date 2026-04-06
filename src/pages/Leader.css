@@ -30,6 +30,15 @@
   gap: 2rem;
 }
 
+.achievements-section {
+  padding: 80px 0; /* Substantial equal top/bottom spacing */
+}
+
+.achievements-section h2 {
+  margin-top: 0;
+  margin-bottom: 4rem; /* Balanced gap between title and grid */
+}
+
 .achievement-item {
   padding: 2rem 1.5rem;
   border-bottom: 4px solid transparent;
@@ -44,14 +53,15 @@
 .icon-wrap {
   width: 70px;
   height: 70px;
-  background-color: var(--off-white);
+  background-color: rgba(211, 47, 47, 0.1);
+  border: 1px solid rgba(211, 47, 47, 0.3);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   font-size: 2rem;
-  color: var(--primary-dark);
+  color: var(--primary-light);
 }
 
 .media-grid {

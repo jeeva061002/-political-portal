@@ -1,36 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700;800&display=swap');
 
 :root {
-  /* Tamil Nadu Political Theme - Red/Black/White */
-  --primary-red: #d32f2f;
-  --primary-dark: #b71c1c;
-  --primary-light: #ef5350;
+  /* Golden Sovereign - Majestic Global Theme */
+  --primary-red: #d4af37; /* Majestic Gold base (reusing name) */
+  --primary-dark: #b8860b;
+  --primary-light: #f1c40f;
   
-  --black: #1a1a1a;
-  --dark-bg: #111111;
-  --darker-bg: #0a0a0a;
+  --black: #0a0700; /* Midnight Brown-Black */
+  --dark-bg: #14110b;
+  --darker-bg: #030200;
   
   --white: #ffffff;
-  --off-white: #f8f9fa;
+  --off-white: #fffdf5;
   
-  --gray: #757575;
-  --light-gray: #e0e0e0;
-  --accent-yellow: #f5a623;
+  --gray: #9c9380;
+  --light-gray: #e6e2d3;
+  --accent-yellow: #ffcc33; /* Vibrant Gold */
+  --accent-bronze: #8b5a2b; /* Burnished Bronze */
   
-  /* Layout */
+  /* Layout & Spacing */
   --nav-height: 80px;
-  --container-max-width: 1200px;
+  --container-max-width: 1280px;
   
-  /* Shadows & Radius */
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
-  --shadow-red: 0 4px 14px 0 rgba(211, 47, 47, 0.39);
+  /* Majestic Golden Shadows */
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.95);
+  --shadow-gold: 0 0 35px rgba(212, 175, 55, 0.35);
   
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+  --radius-xl: 42px;
 }
 
 /* Base Styles */
@@ -42,10 +44,38 @@
 
 body {
   font-family: 'Inter', 'Noto Sans Tamil', sans-serif;
-  background-color: var(--off-white);
-  color: var(--black);
+  background-color: var(--black);
+  /* Golden Sovereign 3-Point Mesh Gradient */
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(45, 100%, 10%, 0.6) 0, transparent 60%),
+    radial-gradient(at 100% 0%, hsla(35, 100%, 8%, 0.5) 0, transparent 50%),
+    radial-gradient(at 50% 100%, hsla(50, 100%, 15%, 0.4) 0, transparent 60%),
+    linear-gradient(135deg, #0a0700 0%, #000000 100%);
+  background-attachment: fixed;
+  color: var(--off-white);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fluid Media Behavior */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Micro-Texture Grain Overlay (Antique Gold feel) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 /* Typography */
@@ -74,11 +104,12 @@ p {
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(1rem, 5vw, 2.5rem);
+  width: 100%;
 }
 
 .section-padding {
-  padding: 80px 0;
+  padding: clamp(3rem, 15vh, 8rem) 0;
 }
 
 .text-center { text-align: center; }
@@ -157,15 +188,16 @@ p {
   animation: slideUp 0.8s ease-out forwards;
 }
 
-/* Glassmorphism */
+/* Glassmorphism - Premium Dark */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
 }
+
 
 /* Section Header */
 .section-header {
@@ -183,4 +215,35 @@ p {
   background-color: var(--primary-red);
   margin: 0 auto;
   border-radius: 2px;
+}
+
+/* Majestic Page Transitions */
+@keyframes pageEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition-wrapper {
+  animation: pageEntrance 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Flex Utilities */
+.d-flex { display: flex !important; }
+.flex-column { flex-direction: column !important; }
+.justify-center { justify-content: center !important; }
+.align-center { align-items: center !important; }
+.mx-auto { margin-left: auto !important; margin-right: auto !important; }
+.text-center { text-align: center !important; }
+
+.w-100 { width: 100% !important; }
+
+@media screen and (max-width: 768px) {
+  .p-5 { padding: 2rem !important; }
 }

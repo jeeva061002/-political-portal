@@ -28,8 +28,8 @@ const Leader = () => {
 
       <div className="container mt-5">
         {/* Achievements Section */}
-        <section className="achievements-section text-center mb-5 pb-4">
-          <h2 className="mb-5">Key Milestones</h2>
+        <section className="achievements-section text-center">
+          <h2>Key Milestones</h2>
 
           <div className="achievements-grid">
             <div className="achievement-item glass-panel">
@@ -99,7 +99,7 @@ const Leader = () => {
             {/* Photo Gallery Grid */}
             <div className="photo-gallery">
               <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Seeman_%28politician%29.jpg" alt="Seeman 1" className="gallery-img" />
-              <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Naam_Tamilar_Katchi_logo.png" alt="Party Logo" className="gallery-img" style={{ objectFit: 'contain', backgroundColor: 'var(--white)' }} />
+              <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Naam_Tamilar_Katchi_logo.png" alt="Party Logo" className="gallery-img" style={{ objectFit: 'contain', backgroundColor: 'rgba(255, 255, 255, 0.05)' }} />
               <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Seeman.jpg" alt="Seeman Speech" className="gallery-img" />
               <img src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=800&auto=format&fit=crop" alt="Rally Crowd" className="gallery-img" />
             </div>

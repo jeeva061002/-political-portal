@@ -1,11 +1,16 @@
 .card {
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
+  background: rgba(10, 7, 0, 0.95);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  border-top: 5px solid var(--accent-yellow);
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .card:hover {
@@ -39,7 +44,7 @@
 
 .card-icon {
   font-size: 2.5rem;
-  color: var(--primary-red);
+  color: var(--accent-yellow);
   margin-bottom: 1rem;
 }
 
@@ -82,9 +87,11 @@
 }
 
 .card-program {
-  border: 1px solid var(--light-gray);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
 }
 
 .card-program:hover {
-  border-color: var(--primary-red);
+  border-color: var(--accent-yellow);
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
 }

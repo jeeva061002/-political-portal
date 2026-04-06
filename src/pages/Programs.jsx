@@ -50,7 +50,7 @@ const Programs = () => {
 
   return (
     <div className="programs-page pb-5">
-      <div className="page-header text-white text-center py-5" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/images/programs_bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="page-header text-white text-center py-5" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/images/sppech.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <h1 className="tamil-text pt-4">மக்கள் திட்டங்கள்</h1>
         <h2 className="mb-2">Our Programs</h2>
         <div className="divider mt-3 mx-auto" style={{ backgroundColor: 'white' }}></div>

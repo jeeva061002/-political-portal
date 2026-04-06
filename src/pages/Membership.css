@@ -49,7 +49,7 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: var(--black);
+  color: var(--gray); /* Matched to Twitter feed gray */
 }
 
 .form-group input,
@@ -80,4 +80,14 @@
   .membership-card {
     padding: 1.5rem;
   }
+}
+
+/* Benefits Section Text Color */
+.benefits-section h2,
+.benefits-section h4 {
+  color: #ffffff !important;
+}
+
+.benefits-section .text-gray {
+  color: rgba(255, 255, 255, 0.9) !important;
 }

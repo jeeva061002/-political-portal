@@ -30,25 +30,19 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Leader', path: '/leader' },
-    { name: 'Manifesto', path: '/manifesto' },
     { name: 'Programs', path: '/programs' },
     { name: 'News', path: '/news' },
     { name: 'District', path: '/district' },
-    { name: 'Elections', path: '/election-data' },
-    { name: 'Social Hub', path: '/social-media' },
     { name: 'Contact', path: '/contact' },
-    { name: 'FAQ', path: '/faq' },
   ];
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container container">
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src="/images/logo.png" alt="Party Logo" className="logo-img" />
-          <span className="logo-text tamil-text">நாம் தமிழர் கட்சி</span>
-        </Link>
-        <div className="menu-icon" onClick={handleClick}>
-          {click ? <FaTimes /> : <FaBars />}
+        <div className="navbar-branding">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <img src="/images/logo.png" alt="Party Logo" className="logo-img" />
+          </Link>
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           {navLinks.map((link, index) => (
@@ -62,19 +56,15 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li className="nav-item mobile-auth">
-            {user ? (
-              <button className="nav-links btn-logout" onClick={() => { signOut(); closeMobileMenu(); }}>Logout</button>
-            ) : (
-              <button className="nav-links btn-login" onClick={() => { signInWithGoogle(); closeMobileMenu(); }}>Login</button>
-            )}
-          </li>
-          <li className="nav-item">
-            <Link to="/membership" className="nav-links-mobile" onClick={closeMobileMenu}>
+          <li className="nav-item mobile-only">
+            <Link to="/membership" className="nav-links" onClick={closeMobileMenu}>
               Join Now
             </Link>
           </li>
         </ul>
+        <div className="menu-icon" onClick={handleClick}>
+          {click ? <FaTimes /> : <FaBars />}
+        </div>
         <div className="navbar-auth-desktop">
           {user ? (
             <div className="user-profile">

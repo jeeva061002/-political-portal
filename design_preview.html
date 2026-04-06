@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Preview - Brave & Bold</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; margin: 0; background: #000; color: white; display: flex; flex-direction: column; gap: 40px; padding: 40px; }
+        .sample { border-radius: 20px; overflow: hidden; padding: 60px; position: relative; min-height: 300px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        h1 { margin: 0 0 10px; font-size: 3rem; }
+        p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; }
+        .badge { display: inline-block; padding: 5px 15px; border-radius: 20px; background: rgba(255,255,255,0.1); font-weight: bold; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        
+        /* Option 1: Emerald Sovereign */
+        .sample-1 {
+            background-color: #000;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 100, 0, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(0, 100, 0, 0.2) 0%, transparent 50%);
+            border: 1px solid rgba(0, 150, 0, 0.2);
+        }
+        .sample-1 h1 { color: #00ff00; text-shadow: 0 0 20px rgba(0,255,0,0.3); }
+        .sample-1 .btn { background: #006400; color: white; }
+
+        /* Option 2: Royal Vanguard */
+        .sample-2 {
+            background-color: #000510;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 31, 63, 0.6) 0%, transparent 60%),
+                radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 40%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .sample-2 h1 { color: #d4af37; text-shadow: 0 0 20px rgba(212,175,55,0.3); }
+        .sample-2 .btn { background: #d4af37; color: black; }
+
+        /* Option 3: Volcanic Resolve */
+        .sample-3 {
+            background-color: #050505;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(204, 85, 0, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(255, 153, 51, 0.15) 0%, transparent 40%);
+            border: 1px solid rgba(204, 85, 0, 0.2);
+        }
+        .sample-3 h1 { color: #ff9933; text-shadow: 0 0 20px rgba(255,153,51,0.4); }
+        .sample-3 .btn { background: #cc5500; color: white; }
+
+        .btn { margin-top: 20px; padding: 12px 30px; border-radius: 8px; font-weight: bold; border: none; align-self: flex-start; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="sample sample-1">
+        <span class="badge">Option 1: Emerald Sovereign</span>
+        <h1>Growth & Resilience</h1>
+        <p>A deep, courageous green representing the roots of our movement and the prosperity of our land. Strong, bold, and unique.</p>
+        <button class="btn">Learn More</button>
+    </div>
+
+    <div class="sample sample-2">
+        <span class="badge">Option 2: Royal Vanguard</span>
+        <h1>Dignity & Wisdom</h1>
+        <p>A sophisticated navy and gold combination. This theme commands respect and exudes the stability of a historical movement.</p>
+        <button class="btn">Join the Movement</button>
+    </div>
+
+    <div class="sample sample-3">
+        <span class="badge">Option 3: Volcanic Resolve</span>
+        <h1>Energy & Courage</h1>
+        <p>Intense burnt orange and charcoal. This design is for moments of high energy and uncompromising bold action.</p>
+        <button class="btn">Take Action</button>
+    </div>
+</body>
+</html>

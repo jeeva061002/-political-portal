@@ -8,9 +8,11 @@
 
 .manifesto-content {
   padding: 2rem;
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   margin-top: 1rem;
 }
 
@@ -31,7 +33,7 @@
   margin-bottom: 20px;
   font-size: 1.1rem;
   line-height: 1.5;
-  color: var(--black);
+  color: #ddd;
 }
 
 .manifesto-list li::before {

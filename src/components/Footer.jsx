@@ -63,7 +63,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} Makkal Katchi. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Naam Tamilar Katchi. All rights reserved.</p>
           <div className="footer-legal">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>

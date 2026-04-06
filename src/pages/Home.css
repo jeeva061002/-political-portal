@@ -1,20 +1,48 @@
 .home-page {
-  /* Specific home styling overrides if necessary */
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+.countdown-wrap {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 40vw, 300px), 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  justify-content: center; /* Center cards if they wrap to one per row */
+  margin-top: 4rem;
 }
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 45vw, 350px), 1fr));
+  gap: clamp(1.5rem, 5vw, 4rem);
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .features-grid, .news-grid {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+.section-header {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .mt-3 {
@@ -34,36 +62,49 @@
 }
 
 .display-4 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 900;
+  letter-spacing: -1px;
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1.5rem auto 3rem;
+  line-height: 1.7;
+  color: #ddd;
+  text-align: center; /* Force centering on all screens */
 }
 
 .custom-bg-light {
-  background-color: var(--off-white);
+  background-color: var(--dark-bg); /* Dark transition */
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .cta-banner {
-  padding: 100px 0;
+  padding: 120px 0;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax effect */
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 968px) {
+  .cta-banner {
+    background-attachment: scroll; /* Better performance/logic on mobile */
+    padding: 80px 20px;
+  }
 }
 
 /* Scroll Animation Utilities */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.2, 0, 0.2, 1), transform 1s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
 .animate-on-scroll.show {
   opacity: 1;
   transform: translateY(0);
 }
+

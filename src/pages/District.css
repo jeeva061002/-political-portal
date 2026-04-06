@@ -1,0 +1,128 @@
+.district-page {
+  background-color: transparent;
+}
+
+.search-container {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+}
+
+.district-search-input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+}
+
+.district-search-input:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.map-card {
+  height: 450px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.centered-map {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 4px solid var(--primary-red);
+  box-shadow: var(--shadow-lg);
+}
+
+.map-section {
+  padding: 0 1rem;
+}
+
+.district-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.district-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.district-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(211, 47, 47, 0.1);
+}
+
+.district-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.district-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.district-info-item svg {
+  margin-right: 12px;
+  color: var(--primary-red);
+  font-size: 1.1rem;
+}
+
+.district-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+@media screen and (max-width: 768px) {
+  .search-container {
+    padding: 1.5rem;
+    margin-top: -30px;
+  }
+  
+  .map-card {
+    height: 300px;
+    margin-top: 2rem;
+  }
+  
+  .district-grid {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  
+  .district-card {
+    padding: 1.5rem;
+  }
+}

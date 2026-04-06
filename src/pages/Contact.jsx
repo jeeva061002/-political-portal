@@ -26,9 +26,9 @@ const Contact = () => {
 
   return (
     <div className="contact-page pb-5">
-      <div className="page-header bg-red text-white text-center py-5">
+      <div className="page-header text-white text-center py-5" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/images/fight.png.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <h1 className="tamil-text pt-4">தொடர்புக்கு (Contact Us)</h1>
-        <div className="divider mt-3 mx-auto" style={{ backgroundColor: 'white' }}></div>
+        <div className="divider mt-3 mx-auto" style={{ backgroundColor: 'var(--accent-yellow)' }}></div>
       </div>
 
       <div className="container mt-5">
